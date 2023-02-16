@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "f18ad9e0-accc-4a38-b85c-7b1ce81066c5",
+		"name": "PersonalSoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18153409"
+	},
+	"item": [
+		{
+			"name": "Listar polizas por numero o placa",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJidmFzcXVleiIsIm5iZiI6MTY3NjQ3ODMyNywiZXhwIjoxNjc2NTY0NzI3LCJpYXQiOjE2NzY0NzgzMjd9.miLr7cvSvskvR04sduJxNhqwfEgfMFXbjMcESTYkw7M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7113/api/Policy/GetPolicy/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Policy",
+						"GetPolicy",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuario",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\":\"bvasquez\",\r\n    \"user_password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7113/api/User/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"User",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Poliza",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJidmFzcXVleiIsIm5iZiI6MTY3NjUwMDcxNCwiZXhwIjoxNjc2NTg3MTE0LCJpYXQiOjE2NzY1MDA3MTR9.DhAtKuSpfAeMNyHMzJQbEVFBh-xScJ53FXcp3GJzOBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_cliente\":\"Hugo Perez\",\r\n    \"cedula_cliente\": \"561531351\",\r\n    \"fecha_nacimiento\":\"1990-01-15\",\r\n    \"tipo_de_poliza\": \"Parcial\",\r\n    \"ciudad_de_cliente\":\"Cali\",\r\n    \"direccion_de_cliente\": \"Cra 15 #45-45\",\r\n    \"placa\":\"JXP720\",\r\n    \"modelo_de_carro\": \"Kia Rio\",\r\n    \"tiene_inspeccion\":\"No\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7113/api/Policy/createPolicy",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Policy",
+						"createPolicy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Renovar Poliza",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJidmFzcXVleiIsIm5iZiI6MTY3NjUwMDcxNCwiZXhwIjoxNjc2NTg3MTE0LCJpYXQiOjE2NzY1MDA3MTR9.DhAtKuSpfAeMNyHMzJQbEVFBh-xScJ53FXcp3GJzOBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo_de_poliza\": \"Parcial\",\r\n    \"ciudad_de_cliente\":\"Barranquilla\",\r\n    \"direccion_de_cliente\": \"Cra 45 #80-40\",\r\n    \"placa\":\"KFP412\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7113/api/Policy/renewPolicy",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Policy",
+						"renewPolicy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
