@@ -18,7 +18,7 @@ Una vez logueados se colocara el token en la parte de Authorizacion en postman, 
 
 # Listar polizas
 En listar polizas es un metodo GET porque lo que no hay body json, pero si hay un parametro que va en el endpoint:
-api/Policy/GetPolicy/{id:int} o tambien api/Policy/GetPolicy/{placa:string}, donde puedes colocar un parametro ya el numero o id de la poliza (actualmente en la BD hay dos polizas 1 y 2) o tambien puedes colocar la placa del vehiculo
+api/Policy/GetPolicy/{id:int} o tambien api/Policy/GetPolicy/{placa:string}, donde puedes colocar un parametro ya sea el numero o id de la poliza (actualmente en la BD hay dos polizas 1 y 2) o tambien puedes colocar la placa del vehiculo
 
 # Crear polizas
 En el endpoint api/Policy/createPolicy Metodo POST puedes crear una poliza con los siguiente body:
