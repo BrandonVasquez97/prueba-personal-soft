@@ -1,5 +1,5 @@
 # Estructura de los proyectos
-Hay dos proyectos, SoftApi que es donde estan todos los servicios api rest y SoftApiTest, donde estan los tests
+Hay dos proyectos, SoftApi que es donde estan todos los servicios api rest y SoftApiTest, donde estan los tests, la base de datos esta en Azure, por lo que no se requiere montarla
 
 # Pasos para levantar los servicios de Api rest
 En la ruta de los dos proyectos se accede a la carpeta SoftApi, en cmd o terminal se puede acceder con cd SoftApi, después simplemente en la terminal se coloca el comando: dotnet run, para compilar y levantar el proyecto
