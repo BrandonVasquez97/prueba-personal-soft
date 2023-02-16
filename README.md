@@ -3,6 +3,10 @@ Hay dos proyectos, SoftApi que es donde estan todos los servicios api rest y Sof
 
 # Pasos para levantar los servicios de Api rest
 En la ruta de los dos proyectos se accede a la carpeta SoftApi, en cmd o terminal se puede acceder con cd SoftApi, después simplemente en la terminal se coloca el comando: dotnet run, para compilar y levantar el proyecto
+En caso de haber pasado tiempo sin que tu equipo ejecutara un proyecto .NET puede aparecer un error de server certificate, ejecutando estos comandos resuelve el problema:
+1.	dotnet dev-certs https --clean
+2.	dotnet dev-certs https --trust
+3.	Reiniciar Visual Studio
 
 # Explicacion Apis del proyecto
 en el archivo PersonalSoft.postman_collection.json se encuentra el proyecto en postman de las apis, se encuentran 4 apis:
